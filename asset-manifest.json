@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/utility-app/static/css/main.261301d9.css",
+    "main.js": "/utility-app/static/js/main.b4c6cb58.js",
+    "index.html": "/utility-app/index.html",
+    "main.261301d9.css.map": "/utility-app/static/css/main.261301d9.css.map",
+    "main.b4c6cb58.js.map": "/utility-app/static/js/main.b4c6cb58.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.261301d9.css",
+    "static/js/main.b4c6cb58.js"
+  ]
+}
