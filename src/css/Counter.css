@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    margin: 0;
+}
+
+.navbar {
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-toggle span {
+    background-color: #333;
+    border-radius: 2px;
+    display: block;
+    height: 3px;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu ul li {
+    font-size: 18px;
+    cursor: pointer;
+    color: #000;
+    transition: color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-menu ul li:hover {
+    color: white;
+    background-color: #2575fc;
+}
+
+.nav-menu ul li:active {
+    color: white;
+    background-color: #0056b3;
+}
+
+.nav-menu ul li:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.nav-menu ul li:active:after {
+    background-color: #003d80;
+}
+
+.main {
+    margin-top: 60px;
+    background: lightblue;
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 50%;
+    max-width: 1200px;
+    text-align: center;
+    margin-top: -120px;
+}
+
+.counter-parent h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.counter-parent h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.counter-parent button {
+    background: #2575fc;
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter-parent button:hover {
+    background: #1b59b8;
+    transform: scale(1.05);
+}
+
+.active-nav {
+    color: white;
+    background-color: #2575fc;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+        margin-left: 20px;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: top 0.3s;
+    }
+
+    .nav-menu.active {
+        top: 100%;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu ul li:hover:after {
+        display: none;
+    }
+
+    .nav-menu ul li:active:after {
+        display: none;
+    }
+
+    .nav-menu ul li:hover {
+        background-color: transparent;
+    }
+
+    .nav-menu ul li:active {
+        background-color: transparent;
+    }
+
+    .main {
+        padding: 20px 10px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .counter-parent h1 {
+        font-size: 28px;
+    }
+
+    .counter-parent h3 {
+        font-size: 20px;
+    }
+
+    .counter-parent button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+}
